@@ -101,22 +101,18 @@ function basketDeleteAll () {
 // console.log(basketDeleteAll());
 
 
-function totalAmount() {
+function totalAmountSum() {
     let tAm = 0;
     for (let i = 0; i < basket.length; i++) {
         tAm = tAm + basket[i].amount;
     }
-    return tAm
-}
-console.log('Общее кол-во товаров = ', totalAmount());
-
-function totalSum() {
+    console.log('Общее кол-во товаров = ', tAm, 'шт.');
     let tSum = 0;
     for (let i = 0; i < basket.length; i++) {
         tSum = tSum + goods[basket[i].goodId].price * basket[i].amount;
     } 
-    return tSum
+    console.log('Сумма товаров = ', tSum, 'руб.');
 }
-console.log('Сумма товаров = ', totalSum(), ' руб.');
+totalAmountSum();
 
 // node 2.2_index
